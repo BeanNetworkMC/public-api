@@ -10,9 +10,146 @@
 <body>
     <div id="container">
         <div id="menu">
+            <div class="logo">
 
+            </div>
+            <div class="search">
+
+            </div>
+            <div class="menu">
+                <ul class="navigation">
+                    <li data-item-id="section/Introduction">
+                        <label>
+                            <span class="title">Introduction</span>
+                            <svg class="arrow" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true"><polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon></svg>
+                        </label>
+                        <ul class="subnav">
+                            <li data-item-id="section/Introduction/Limits">
+                                <label>
+                                    <span class="title">Limits</span>
+                                </label>
+                            </li>
+                            <li data-item-id="section/Introduction/Rules">
+                                <label>
+                                    <span class="title">Rules</span>
+                                </label>
+                            </li>
+                            <li data-item-id="section/Introduction/Game-Types">
+                                <label>
+                                    <span class="title">Game Types</span>
+                                </label>
+                            </li>
+                            <li data-item-id="section/Introduction/Notes">
+                                <label>
+                                    <span class="title">Notes</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-item-id="section/Authentication"></li>
+                    <li data-item-id="section/API"></li>
+                    <li data-item-id="section/Player-Data"></li>
+                    <li data-item-id="section/Resources"></li>
+                    <li data-item-id="section/Other"></li>
+                </ul>
+            </div>
         </div>
-        <div id="content"></div>
+        <div id="content">
+            <div>
+                <h1>
+                    Beanium Public API
+                    <span>
+                        (
+                        <!---->
+                        v1
+                        <!---->
+                        )
+                    </span>
+                </h1>
+                <p></p>
+            </div>
+            <div>
+                <h1>Introduction</h1>
+                <p>
+                    This is the official Beanium API documentation.
+                    <a href="https://beanium.net">Beanium Website</a>
+                     - 
+                    <a href="https://github.com/BeanNetworkMC/public-api">GitHub Repo</a>
+                </p>
+                
+                <h2>Limits</h2>
+                <p>
+                    API keys have a default rate limit of 120 requests per minute. 
+                    Endpoints which require the use of an API key will also respond with headers to assist with managing the rate limite:
+                </p>
+                <ul>
+                    <li>'RateLimit-Limit' - The limit of requests per minute for the provided API key.</li>
+                    <li>'RateLimit-Remaining' - The remaining amount of requests allowed for the current minute.</li>
+                    <li>'RateLimit-Reset' - The amount of seconds until the next minute and the reset of the API key usages.</li>
+                </ul>
+                <p>
+                    If you require a higher limit please contact us via our <a href="https://support.beanium.net">support desk</a> 
+                    with an explanation for the increased limit and your Minecraft Account UUID. Please not that we do not give 
+                    increased limits for future expansion, please only request an increase once you need it.
+                </p>
+                
+                <h2>Rules</h2>
+                <p>
+                    While the API is free to be used in most applications and scenarios, we do have some rules and we will not grant a limit increase for applications that violate these rules.
+                </p>
+                <ul>
+                    <li>You may not use the API for commercial use. Any features that use the API must be available to all users.</li>
+                    <li>You may not use the API for heavy continuous polling of data, such as requesting the same player every minute for detection of stats earned in a game.</li>
+                    <li>You may not use methods such as multiple accounts to bypass the API limits.</li>
+                    <li>Use of the API must conform to our <a href="https://beanium.net/terms">Terms of Service</a>.</li>
+                </ul>
+                <strong>Any abuse of the API will lead to your API key being reset, or banned.</strong>
+                
+                <h2>Game Types</h2>
+                <p>Coming soon...</p>
+                <!--<table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Type Name</th>
+                            <th>Database Name</th>
+                            <th>Clean Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>LOBBY</td>
+                            <td>Lobby</td>
+                        </tr>
+                    </tbody>
+                </table>-->
+
+                <h2>Notes</h2>
+                <strong>Date and Time</strong>
+                <p>Generally dates are stored as a Unix Epoch times in milliseconds.</p>
+                <strong>Response Format</strong>
+                <p>Responses are server in JSON format.</p>
+                <strong>UUID Parameters</strong>
+                <p>All UUID parameters support both dashed and undashed versions.</p>
+            </div>
+            <div>
+                <h1>Authorization</h1>
+                <h2>ApiKey</h2>
+                <p>Can be obtained by joining the Minecraft server <code>mc.beanium.net</code> and using the command <code>/api</code>.</p>
+                <table class="security-details">
+                    <tbody>
+                        <tr>
+                            <th> Security Scheme Type </th>
+                            <td> <!-- -->API Key<!-- --> </td>
+                        </tr>
+                        <tr>
+                            <th> <!-- -->Header<!-- --> parameter name:</th>
+                            <td> <!-- -->API-Key<!-- --> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
         <div id="responses"></div>
     </div>
 </body>
