@@ -5,6 +5,9 @@
 body {
     padding: 0;
     margin: 0;
+}
+
+#container {
     font-family: Roboto,sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -14,6 +17,7 @@ body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeSpeed !important;
     text-size-adjust: 100%;
+    display: flex;
 }
 
 #menu {
@@ -38,8 +42,57 @@ body {
     padding: 5px 0;
 }
 
+h1 {
+    font-family: Montserrat,sans-serif;
+    font-weight: 400;
+    font-size: 1.85714em;
+    line-height: 1.6em;
+    color: #32329f;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-family: Montserrat,sans-serif;
+    font-weight: 400;
+    font-size: 1.57143em;
+    line-height: 1.6em;
+    color: black;
+}
+
 div.title {
     display: flex;
     width: 100%;
     padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+label {
+    cursor: pointer;
+    
+}
+
+li {
+    list-style: none inside none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
+}
+
+label.selected {
+    cursor: pointer;
+    color: rgb(50, 50, 159);
+    margin: 0px;
+    padding: 12.5px 16px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.929em;
+    text-transform: none;
+    background-color: rgb(237, 237, 237);
 }

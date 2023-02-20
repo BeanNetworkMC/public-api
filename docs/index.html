@@ -11,10 +11,7 @@
     <div id="container">
         <div id="menu">
             <div class="logo">
-
-            </div>
-            <div class="search">
-
+                <!-- TODO -->
             </div>
             <div class="menu">
                 <ul class="navigation">
@@ -46,11 +43,73 @@
                             </li>
                         </ul>
                     </li>
-                    <li data-item-id="section/Authentication"></li>
-                    <li data-item-id="section/API"></li>
-                    <li data-item-id="section/Player-Data"></li>
-                    <li data-item-id="section/Resources"></li>
-                    <li data-item-id="section/Other"></li>
+                    <li data-item-id="section/Authentication">
+                        <label>
+                            <span class="title">Authentication</span>
+                        </label>
+                    </li>
+                    <li data-item-id="section/API">
+                        <label>
+                            <span class="title">API</span>
+                        </label>
+                        <svg class="arrow" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true"><polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon></svg>
+                        <ul class="subnav">
+                            <li data-item-id="section/API/key">
+                                <label>
+                                    <span class="method get">GET</span>
+                                    <span class="title">API Key Information</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-item-id="section/Player-Data">
+                        <label>
+                            <span class="title">Player Data</span>
+                        </label>
+                        <svg class="arrow" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true"><polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon></svg>
+                        <ul class="subnav">
+                            <li data-item-id="section/Player-Data/player">
+                                <label>
+                                    <span class="method get">GET</span>
+                                    <span class="title">Data of a specific player, including game stats</span>
+                                </label>
+                            </li>
+                            <li data-item-id="section/Player-Data/status">
+                                <label>
+                                    <span class="method get">GET</span>
+                                    <span class="title">The current online status of a specific player</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-item-id="section/Resources">
+                        <label>
+                            <span class="title">Resources</span>
+                        </label>
+                        <svg class="arrow" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true"><polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon></svg>
+                        <ul class="subnav">
+                            <li data-item-id="section/Resources/games">
+                                <label>
+                                    <span class="method get">GET</span>
+                                    <span class="title">Game information</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-item-id="section/Other">
+                        <label>
+                            <span class="title">Other</span>
+                        </label>
+                        <svg class="arrow" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0" aria-hidden="true"><polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon></svg>
+                        <ul class="subnav">
+                            <li data-item-id="section/Other/counts">
+                                <label>
+                                    <span class="method get">GET</span>
+                                    <span class="title">Current player counts</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -58,17 +117,11 @@
             <div>
                 <h1>
                     Beanium Public API
-                    <span>
-                        (
-                        <!---->
-                        v1
-                        <!---->
-                        )
-                    </span>
+                    <span>(v1)</span>
                 </h1>
                 <p></p>
             </div>
-            <div>
+            <div id="section/Introduction">
                 <h1>Introduction</h1>
                 <p>
                     This is the official Beanium API documentation.
@@ -76,7 +129,8 @@
                      - 
                     <a href="https://github.com/BeanNetworkMC/public-api">GitHub Repo</a>
                 </p>
-                
+            </div>
+            <div id="section/Introduction/limits">
                 <h2>Limits</h2>
                 <p>
                     API keys have a default rate limit of 120 requests per minute. 
@@ -92,7 +146,8 @@
                     with an explanation for the increased limit and your Minecraft Account UUID. Please not that we do not give 
                     increased limits for future expansion, please only request an increase once you need it.
                 </p>
-                
+            </div>
+            <div id="section/Introduction/rules">
                 <h2>Rules</h2>
                 <p>
                     While the API is free to be used in most applications and scenarios, we do have some rules and we will not grant a limit increase for applications that violate these rules.
@@ -104,7 +159,8 @@
                     <li>Use of the API must conform to our <a href="https://beanium.net/terms">Terms of Service</a>.</li>
                 </ul>
                 <strong>Any abuse of the API will lead to your API key being reset, or banned.</strong>
-                
+            </div>
+            <div id="section/Introduction/games">
                 <h2>Game Types</h2>
                 <p>Coming soon...</p>
                 <!--<table>
@@ -123,31 +179,53 @@
                         </tr>
                     </tbody>
                 </table>-->
-
+            </div>
+            <div id="section/Introduction/notes">
                 <h2>Notes</h2>
-                <strong>Date and Time</strong>
+                <h3>Date and Time</h3>
                 <p>Generally dates are stored as a Unix Epoch times in milliseconds.</p>
-                <strong>Response Format</strong>
+                <h3>Response Format</h3>
                 <p>Responses are server in JSON format.</p>
-                <strong>UUID Parameters</strong>
+                <h3>UUID Parameters</h3>
                 <p>All UUID parameters support both dashed and undashed versions.</p>
             </div>
-            <div>
+            <div id="section/Authentication">
                 <h1>Authorization</h1>
-                <h2>ApiKey</h2>
-                <p>Can be obtained by joining the Minecraft server <code>mc.beanium.net</code> and using the command <code>/api</code>.</p>
-                <table class="security-details">
-                    <tbody>
-                        <tr>
-                            <th> Security Scheme Type </th>
-                            <td> <!-- -->API Key<!-- --> </td>
-                        </tr>
-                        <tr>
-                            <th> <!-- -->Header<!-- --> parameter name:</th>
-                            <td> <!-- -->API-Key<!-- --> </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div id="section/Authentication/ApiKey">
+                    <h2>ApiKey</h2>
+                    <p>Can be obtained by joining the Minecraft server <code>mc.beanium.net</code> and using the command <code>/api</code>.</p>
+                    <table class="security-details">
+                        <tbody>
+                            <tr>
+                                <th> Security Scheme Type </th>
+                                <td> <!-- -->API Key<!-- --> </td>
+                            </tr>
+                            <tr>
+                                <th> <!-- -->Header<!-- --> parameter name:</th>
+                                <td> <!-- -->API-Key<!-- --> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="section/API">
+                <h1>API</h1>
+                <div id="section/API/key">
+                    <h2>API Key Information</h2>
+                    <div class="requirements">
+                        <div class="requirement-type">
+                            <h5>Authorizations:</h5>
+                        </div>
+                        <div class="requirement">
+                            <a href="/#section/Authentication/ApiKey">ApiKey</a>
+                        </div>
+                    </div>
+                    <div class="responses">
+                        <div data-code="200" data-response="Get key information" data-success="true">
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="responses"></div>
